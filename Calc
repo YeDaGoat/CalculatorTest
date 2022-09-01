@@ -21,12 +21,12 @@ char keys[ROWS][COLS] = {
 
 };
 
-byte rowPins[ROWS] = { 0, 1, 2, 3 };// Connect keypad ROW0, ROW1, ROW2 and ROW3 to these Arduino pins.
-byte colPins[COLS] = { 4, 5, 6, 7 }; // Connect keypad COL0, COL1 and COL2 to these Arduino pins.
+byte rowPins[ROWS] = { 13, 12, 11, 10 };// Connect keypad ROW0, ROW1, ROW2 and ROW3 to these Arduino pins.
+byte colPins[COLS] = { 9, 8, 7, 6 }; // Connect keypad COL0, COL1 and COL2 to these Arduino pins.
 
 Keypad kpd = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS ); //  Create the Keypad
 
-const int rs = 8, en = 9, d4 = 10, d5 = 11, d6 = 12, d7 = 13; //Pins to which LCD is connected
+const int rs = 1, en = 0, d4 = 2, d5 = 3, d6 = 4, d7 = 5; //Pins to which LCD is connected
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
  long Num1,Num2,Number;
