@@ -35,11 +35,11 @@ LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
  
 void setup() {
   lcd.begin(16, 2); //We are using a 16*2 LCD display
-  lcd.print("DIY Calculator"); //Display a intro message
+  lcd.print("calculator"); //Display a intro message
   lcd.setCursor(0, 1);   // set the cursor to column 0, line 1
-  lcd.print("-CircuitDigest"); //Display a intro message 
+  lcd.print("brubrubrubrubrubrubr"); //Display a intro message 
 
-   delay(2000); //Wait for display to show info
+   delay(1000); //Wait for display to show info
     lcd.clear(); //Then clean it
 }
 
@@ -161,7 +161,7 @@ void DetectButtons()
      if (key == 'C')
     {Serial.println ("Multiplication"); action = '*';}
      if (key == 'D')
-    {Serial.println ("Devesion"); action = '/';}  
+    {Serial.println ("Division"); action = '/';}  
 
     delay(100);
   }
@@ -189,7 +189,7 @@ void DisplayResult()
   lcd.print(Num1); lcd.print(action); lcd.print(Num2); 
   
   if (result==true)
-  {lcd.print(" ="); lcd.print(Number);} //Display the result
+  {lcd.print("="); lcd.print(Number);} //Display the result
   
   lcd.setCursor(0, 1);   // set the cursor to column 0, line 1
   lcd.print(Number); //Display the result
